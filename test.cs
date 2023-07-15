@@ -11,46 +11,10 @@ namespace test
             Console.WriteLine("Hello World!");
 
 
-
             
-            class plusMath(int a, b){
-                return a+b;
-            }
-            class minusMath(int a, b){
-                return a-b;
-            }
-            class multiMath(int a, b){
-                return a*b;
-            }
-            class divMath(int a, b){
-                return a/b;
-            }
-
-            string a, b, c = Console.ReadLine();
-            if(c == "+"){
-                Console.WriteLine(plusMath(a,b));
-            }
-            else if(c == "-"){
-                Console.WriteLine(minusMath(a,b));
-            }
-            else if(c == "*"){
-                Console.WriteLine(multiMath(a,b));
-            }
-            else if(c == "/"){
-                Console.WriteLine(divMath(a,b));
-            }
-            else{
-                return;
-            }
             
-
-
-
-
-
-
+            Console.ReadLine();
 
         }
     }
 }
-```
