@@ -1,8 +1,5 @@
 #pragma region "Includes"
-/* == Includes Cahnges ==
-1. Removed Servo.h
-2.
-*/
+
 #include <Arduino.h>
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h> 
@@ -11,9 +8,6 @@
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 
 #pragma region "defines"
-/* == defines Changes == 
-1. UltraSonic define(echo, trig) << 삭제필요
-*/
 #define echo 11
 #define trig 10
 
@@ -63,6 +57,8 @@ void loop() {
 
     char dir = Serial.read();
     keyboardcontrol(dir);
+
+    
 }
 
 void keyboardcontrol(char direction)
@@ -92,9 +88,9 @@ void keyboardcontrol(char direction)
       digitalWrite(IN22, LOW);
       break;
     default:
-      Serial.println("Default");
       break;
   }
+  motorControl();
   Serial.println("return");
 }
 
@@ -104,7 +100,7 @@ void motorControl()
     digitalWrite(trig, HIGH);
     delayMicroseconds(10);
     digitalWrite(trig, LOW);
-
+    
     unsigned long duration = pulseIn(echo, HIGH);
     float distance = ((float)(340*duration)/10000)/2;
     Serial.println("Report Created");
@@ -118,11 +114,19 @@ void motorControl()
         digitalWrite(IN21, LOW);
         digitalWrite(IN22, LOW);
 
+        delay(100);
+
         digitalWrite(IN11, LOW);
         digitalWrite(IN12, HIGH);
         digitalWrite(IN21, LOW);
         digitalWrite(IN22, HIGH);
-        delay(200);
+        delay(200); 
+
+        digitalWrite(IN11, HIGH);
+        digitalWrite(IN12, LOW);
+
+        delay(500);
+        
     }
 }
 
