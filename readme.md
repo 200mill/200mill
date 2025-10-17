@@ -15,4 +15,4 @@ Amatuer Radio Op.
 I operate station on V/U band.
 
 
-See [QRZ.com](QRZ.com/db/6K5ETX) to get more information about my HAM Station
+See [QRZ.com](http://www.QRZ.com/db/6K5ETX) to get more information about my HAM Station
