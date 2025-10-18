@@ -7,6 +7,12 @@ beginner level programmer.
 
 I am currently learning C/C++ now.
 
+# Contacts
+### Discord
+* Main : @200mill
+* Alternative : @6k5etx
+
+### other
 
 
 # CQ, CQ, CQ!
